@@ -1,0 +1,26 @@
+#+TITLE: QP Setup
+#+AUTHOR: Peter Polidoro
+#+EMAIL: peterpolidoro@gmail.com
+
+* Repository Information
+  - Author :: Peter Polidoro
+  - License :: BSD
+
+* Ubuntu
+
+** Compile
+
+  #+BEGIN_SRC sh
+    git clone https://github.com/janelia-embedded/qpc.git
+    sudo apt install gcc-arm-none-eabi
+    cd qpc/examples/arm-cm/game_efm32-slstk3401a/qk/gnu
+    export GNU_ARM=/usr
+    make
+  #+END_SRC
+
+** Upload
+
+  #+BEGIN_SRC sh
+    cd qpc/examples/arm-cm/game_efm32-slstk3401a/qk/gnu
+    cp dbg/game-qk.bin /media/$USER/STK3401/
+  #+END_SRC
